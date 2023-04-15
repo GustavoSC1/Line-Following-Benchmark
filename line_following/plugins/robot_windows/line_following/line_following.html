@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+  </head>
+  <body>
+    <div id='infotabs' class='webotsTabs webotsRobotWindowTabs'>
+      <ul>
+        <li><a href='#infotab-overview'>Overview</a></li>
+        <li><a href='#infotab-metrics'>Metrics</a></li>
+        <li><a href='#infotab-instructions'>Instructions</a></li>
+        <li><a href='#infotab-explanations'>Explanations</a></li>
+      </ul>
+      <div id='infotab-overview'>
+        <p>This simulation aims to create an algorithm so that the robot L1R2 (Lara Remote Robot) can, through sensor reading, detect and follow the line drawn on the ground, completing the route in the shortest possible time. During the journey, the robot will encounter several challenges that must be overcome.</p>
+        <p>The programming language used in the controller is Python.</p>
+      </div>
+      <div id='infotab-metrics'>
+        <div style='text-align:center'><em>t</em> = <span id='time-display'>00:00:00</span></div>
+        <br>
+        <p>The reference metric <em>t</em> is the elapsed time since the start of the simulation.</p>
+        <p>Time measurement will stop as soon as the robot reaches the end of the path.</p>      
+        <p>Minimizing this time is one of the objectives for this simulation.</p>      
+      </div>
+      <div id='infotab-instructions'>
+      <h2>Programming a robot in Python</h2>
+        <ol>
+            <li><b>Open the source code editor</b>: lick on the robot with the right mouse button to pop up the robot contextual menu and select the "Edit controller" item. A window should open containing the source code of the controller of the robot.
+            </li>
+            <li><b>Edit the controller</b>: a part of the code is already ready, such as the initialization of some variables, the import of libraries and the robot's initial settings. The user must implement the rest of the program.</li>
+            <li><b>Save your program</b>: nin the source code editor, press <em id='saveShortcut'>Ctrl-S</em> to save your program.
+            </li>
+            <li><b>Reset the simulation</b>: press the reset button <img src='reset.png' alt='reset'> to take into account your modifications.</li>
+            <li><b>Run the simulation</b>: press the play button <img src='real_time.png' alt='real-time'> to run the simulation.
+            </li>
+            <li><b>Observe the result</b>: the robot should move forward. Your performance should be updated in real time on the <a class='tablink' onclick='$("#infotabs").tabs({active:1});'>Metrics</a> tab. After a while, the robot should stop and your performance should be recorded (if you are logged in). 
+            Try to modify the controller program again to achieve a better performance. 
+            </li>
+         </ol>
+         <p>During the execution, the sample controller prints some output on the console. 
+           You can open the console by clicking on the toolbar button <img src='console.png' alt='console'>.
+         </p>
+      </div>
+      <div id='infotab-explanations'>
+        <h2>L1R2</h2>
+        <p>The L1R2 (Lara Remote Robot) is a line follower and rescue robot that belongs to the Laboratório Remoto em Ambiente Virtual de Aprendizagem (LARA), of the Computer Science course, at the State University of Southwest Bahia.</p>     
+        <p>The robot has three light sensors at the front, three ultrasonic sensors at the front and one on each side, and three infrared sensors at the bottom.</p>   
+        <p>So that the L1R2 can take the curves, it uses the concept of differential drive as locomotion mechanics. A robot is considered differentially driven when it has two motors mounted in fixed positions on its left and right side, and each of these motors is driven independently. For the robot to go forward it is necessary that both motors are moved at the same speed, and to make a turn to the left the right motor needs to be at a higher speed than the left motor and vice versa to turn to the right. It is also possible to make the robot rotate around its own axis, moving both wheels in opposite directions with the same speed. To maintain the stability of the robot, a third omnidirectional wheel is required.</p>
+      </div>
+    </div>
+    <script src="line_following.js"></script>
+  </body>
+</html>

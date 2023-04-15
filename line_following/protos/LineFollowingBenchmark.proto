@@ -1,0 +1,10 @@
+PROTO LineFollowingBenchmark [
+  field SFString window "line_following"
+]
+{
+  Robot {
+    controller "supervisor"
+    supervisor TRUE
+    window IS window
+  }
+}
