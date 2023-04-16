@@ -4,6 +4,8 @@
 
 ## Robot
 
+Webbots used: R2021a
+
 Name: L1R2 (Lara Remote Robot)
 
 Url: https://ieeexplore.ieee.org/abstract/document/7740908
